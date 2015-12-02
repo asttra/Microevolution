@@ -9,7 +9,7 @@ def mutate_base(base):
     if base == 'A':
         new_base = random.choice('CGT')
     elif base == 'C':
-        new base = random.choice('AGT')
+        new_base = random.choice('AGT')
     elif base == 'G':
         new_base == random.choice('ACT')
     else:
