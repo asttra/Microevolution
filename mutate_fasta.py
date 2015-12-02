@@ -2,6 +2,7 @@
 
 import sys
 import random
+import argparse
 
 def mutate_base(base):
     if base == 'A':
@@ -24,8 +25,13 @@ def mutate(seq):
     return new_seq
 
 def main():
+    # Parse command line args
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fasta', '-f', required=True)
+    args = parser.parse_args()
+
     # Open fasta file and read it line by line
-    with open(sys.argv[1]) as fastafile:
+    with open(args.fasta) as fastafile:
         for line in fastafile:
             if line.startswith(">"):
                 sys.stdout.write(line)
