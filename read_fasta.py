@@ -11,5 +11,4 @@ with open(args.bases, 'r') as gfp_fasta:
     for line in gfp_fasta:
         if line.startswith(">"):
             continue
-        for bases in line.strip():
-            print bases
+        print line.strip()
