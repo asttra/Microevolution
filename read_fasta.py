@@ -35,12 +35,7 @@ with open(args.bases, 'r') as fasta:
         if line.startswith(">"):
             continue
         print line.strip()
-<<<<<<< HEAD
         print('\n')
-       # mutated_sequence = mutate()
+       # mutated_sequence = mutate() [What do I put in the paranthesis??]
        # print mutated_sequence
-=======
-        print ('/n')
-        mutated_sequence = mutate() #what goes in here?
-        print mutated_sequence
->>>>>>> c619afb880573124d320a6c2d04f9ee837ce2f06
+
