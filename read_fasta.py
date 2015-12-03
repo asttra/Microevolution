@@ -34,7 +34,8 @@ def main():
     with open(args.bases, 'r') as fasta:
         for line in fasta:
             if line.startswith(">"):
-                continue
+                print('\n')
+                print(line.strip())
             else:
                 print('\n')
                 print('Original Sequence: \n')
