@@ -25,18 +25,20 @@ def mutate(seq):
     new_sequence = "".join(base_list)
     return new_seq
 
+def main():
 
-parser = argparse.ArgumentParser()
-parser.add_argument("bases")
-args = parser.parse_args()
-
-with open(args.bases, 'r') as fasta:
-    for line in fasta:
-        if line.startswith(">"):
-            continue
-        print line.strip()
-        print('\n')
-        sequence = line.strip()
-        mutated_sequence = mutate(sequence)
-        print(mutated_sequence)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("bases")
+    args = parser.parse_args()
+    
+    with open(args.bases, 'r') as fasta:
+        for line in fasta:
+            if line.startswith(">"):
+                continue
+            else:
+                print line.strip()
+                print('\n')
+                sequence = line.strip()
+                mutated_sequence = mutate(sequence)
+                print(mutated_sequence)
 
