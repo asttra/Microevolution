@@ -30,10 +30,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("bases")
 args = parser.parse_args()
 
-with open(args.bases, 'r') as gfp_fasta:
-    for line in gfp_fasta:
+with open(args.bases, 'r') as fasta:
+    for line in fasta:
         if line.startswith(">"):
             continue
         print line.strip()
-        mutated_sequence = mutate(bases)
-        print mutated_sequence
+        print('\n')
+       # mutated_sequence = mutate()
+       # print mutated_sequence
