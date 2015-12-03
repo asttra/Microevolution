@@ -36,9 +36,15 @@ def main():
             if line.startswith(">"):
                 continue
             else:
+                print('\n')
+                print('Original Sequence: \n')
                 print line.strip()
                 print('\n')
+                print('Mutated Sequence: \n')
                 sequence = line.strip()
                 mutated_sequence = mutate(sequence)
                 print(mutated_sequence)
 
+
+if __name__ == '__main__':
+    main()
