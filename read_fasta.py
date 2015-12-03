@@ -23,7 +23,7 @@ def mutate(seq):
     new_base = mutate_base(old_base)
     base_list[position_to_mutate] = new_base
     new_sequence = "".join(base_list)
-    return new_seq
+    return new_sequence
 
 def main():
 
