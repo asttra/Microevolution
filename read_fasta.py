@@ -35,5 +35,6 @@ with open(args.bases, 'r') as gfp_fasta:
         if line.startswith(">"):
             continue
         print line.strip()
-        mutated_sequence = mutate(bases)
+        print ('/n')
+        mutated_sequence = mutate() #what goes in here?
         print mutated_sequence
