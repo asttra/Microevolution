@@ -36,6 +36,7 @@ with open(args.bases, 'r') as fasta:
             continue
         print line.strip()
         print('\n')
-       # mutated_sequence = mutate() [What do I put in the paranthesis??]
-       # print mutated_sequence
+        sequence = line.strip()
+        mutated_sequence = mutate(sequence)
+        print(mutated_sequence)
 
