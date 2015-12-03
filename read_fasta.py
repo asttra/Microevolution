@@ -11,9 +11,9 @@ def mutate_base(base):
     elif base == 'C':
         new_base = random.choice('AGT')
     elif base == 'G':
-        new_base == random.choice('ACT')
+        new_base = random.choice('ACT')
     else:
-        new_base == random.choice('ACG')
+        new_base = random.choice('ACG')
     return new_base
 
 def mutate(seq):
