@@ -27,6 +27,8 @@ def mutate(seq):
 
 def main():
 
+    seq = ''
+
     parser = argparse.ArgumentParser()
     parser.add_argument("bases")
     args = parser.parse_args()
@@ -37,14 +39,11 @@ def main():
                 print('\n')
                 print(line.strip())
             else:
-                print('\n')
-                print('Original Sequence: \n')
-                print line.strip()
-                print('\n')
-                print('Mutated Sequence: \n')
-                sequence = line.strip()
-                mutated_sequence = mutate(sequence)
-                print(mutated_sequence)
+                seq += line.strip()
+
+            # end of for loop
+            mutated_sequence = mutate(seq)
+            print(mutated_sequence)
 
 
 if __name__ == '__main__':
