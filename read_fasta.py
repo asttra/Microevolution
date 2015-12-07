@@ -41,9 +41,9 @@ def main():
             else:
                 seq += line.strip()
 
-            # end of for loop
-            mutated_sequence = mutate(seq)
-            print(mutated_sequence)
+        # end of for loop
+        mutated_sequence = mutate(seq)
+        print(mutated_sequence)
 
 
 if __name__ == '__main__':
