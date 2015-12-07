@@ -37,13 +37,17 @@ def main():
         for line in fasta:
             if line.startswith(">"):
                 print('\n')
+                print('Gene Information:')
                 print(line.strip())
             else:
                 seq += line.strip()
 
         # end of for loop
         mutated_sequence = mutate(seq)
+        print('\n')
+        print('Mutated Sequence:')
         print(mutated_sequence)
+        print('\n')
 
 
 if __name__ == '__main__':
